@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>💘 Valentine?</title>
+    <style>
+        body {
+            background: #ffd6e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #yes {
+            background: #ff4d88;
+            color: white;
+        }
+
+        #no {
+            background: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/029/889/806/small/cute-cartoon-bear-face-mascot-icon-emoji-sticker-design-free-vector.jpg"
+            alt="bear">
+        <h2>Will you be my valentine? 💕</h2>
+        <button id="yes" onclick="yesClicked()">Yes</button>
+        <button id="no" onmouseover="moveNo()">No</button>
+    </div>
+
+    <script>
+        function yesClicked() {
+            document.body.innerHTML = "<h1>YAY 💖 I love you!!!</h1>";
+        }
+
+        function moveNo() {
+            const noBtn = document.getElementById("no");
+            noBtn.style.position = "absolute";
+            noBtn.style.left = Math.random() * 80 + "vw";
+            noBtn.style.top = Math.random() * 80 + "vh";
+        }
+    </script>
+
+</body>
+
+</html>
